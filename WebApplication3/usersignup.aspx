@@ -144,13 +144,7 @@
                                 
                         </div>
 
-                        <div class="row">
-                                <div class="col-md-6">
-                                   <label>Member ID</label>
-                                    <div class="form-group">
-                                        <asp:TextBox class="form-control" ID="TextBox8" runat="server" placeholder="User ID"></asp:TextBox>
-                                    </div>
-                                </div>
+                       
 
                                 <div class="col-md-6">
                                     <label>Password</label>
