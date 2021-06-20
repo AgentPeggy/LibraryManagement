@@ -49,13 +49,13 @@
                             <a class="nav-link" href="homepage.aspx">Home</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="aboutUs.aspx">About Us</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Terms</a>
+                            <a class="nav-link" href="terms.aspx">Terms</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Defaulters</a>
+                            <a class="nav-link" href="defaulters.aspx">Defaulters</a>
                         </li>
 
                     </ul>
