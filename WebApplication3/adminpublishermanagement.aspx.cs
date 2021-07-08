@@ -23,7 +23,35 @@ namespace WebApplication3
         // add publisher
         protected void Button2_Click(object sender, EventArgs e)
         {
-            if(checkPublisherExists())
+
+           
+
+
+            string message = "";
+            Boolean isValid = true;
+            string publisherId = TextBox1.Text.Trim();
+            Boolean ispublisherIdValid = publisherId.Length > 0;
+            if (!ispublisherIdValid)
+            {
+                isValid = false;
+                message += "Please enter publisherId. ";
+            }
+
+            string publisherName = TextBox2.Text.Trim();
+            Boolean ispublisherNameValid = publisherName.Length > 0;
+            if (!ispublisherNameValid)
+            {
+                isValid = false;
+                message += "Please enter publisherName. ";
+            }
+
+            if (!isValid)
+            {
+                Response.Write("<script>alert('" + message + "');</script>");
+            }
+
+
+            else if (checkPublisherExists())
             {
                 Response.Write("<script>alert('Publisher Already Exist with this ID.');</script>");
             }

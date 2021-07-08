@@ -54,7 +54,107 @@ namespace WebApplication3
             }
             else
             {
-                addNewBook();
+                // validations
+                string message = "";
+                Boolean isValid = true;
+
+                
+                int genre = ListBox1.GetSelectedIndices().Length;
+                Boolean isGenreValid = genre > 0;
+                if (!isGenreValid)
+                {
+                    isValid = false;
+                    message += "Please select genre. ";
+                }
+
+                string bookId = TextBox1.Text.Trim();
+                Boolean isbookIdValid = bookId.Length > 0;
+                if (!isbookIdValid)
+                {
+                    isValid = false;
+                    message += "Please enter bookid. ";
+                }
+
+                string bookName = TextBox2.Text.Trim();
+                Boolean isbookNameValid = bookName.Length > 0;
+                if (!isbookNameValid)
+                {
+                    isValid = false;
+                    message += "Please enter bookName. ";
+                }
+
+                string publishDate = TextBox3.Text.Trim();
+                Boolean ispublishDateValid = publishDate.Length > 0;
+                if (!ispublishDateValid)
+                {
+                    isValid = false;
+                    message += "Please enter publishDate. ";
+                }
+
+                string edition = TextBox9.Text.Trim();
+                Boolean iseditionValid = edition.Length > 0;
+                if (!iseditionValid)
+                {
+                    isValid = false;
+                    message += "Please enter edition. ";
+                }
+
+                string bookCost = TextBox10.Text.Trim();
+                Boolean isbookCostValid = bookCost.Length > 0;
+                if (!isbookCostValid)
+                {
+                    isValid = false;
+                    message += "Please enter bookCost. ";
+                }
+
+                string noOfPages = TextBox11.Text.Trim();
+                Boolean isnoOfPagesValid = noOfPages.Length > 0;
+                if (!isnoOfPagesValid)
+                {
+                    isValid = false;
+                    message += "Please enter noOfPages. ";
+                }
+
+                string bookDescription = TextBox6.Text.Trim();
+                Boolean isbookDescriptionValid = bookDescription.Length > 0;
+                if (!isbookDescriptionValid)
+                {
+                    isValid = false;
+                    message += "Please enter bookDescription. ";
+                }
+
+                string authorName = DropDownList3.SelectedItem.Value;
+                Boolean isauthorNameValid = authorName != "";
+                if (!isauthorNameValid)
+                {
+                    isValid = false;
+                    message += "Please select authorName. ";
+                }
+
+                string publisherName = DropDownList2.SelectedItem.Value;
+                Boolean ispublisherNameValid = publisherName != "";
+                if (!ispublisherNameValid)
+                {
+                    isValid = false;
+                    message += "Please select publisherName. ";
+                }
+
+
+                /*
+                cmd.Parameters.AddWithValue("@language", DropDownList1.SelectedItem.Value);
+                */
+
+
+                //Validations Complete//
+                if (!isValid)
+                {
+                    Response.Write("<script>alert('" + message + "');</script>");
+                }
+                else
+                {
+                    addNewBook();
+                }
+      
             }
         }
 

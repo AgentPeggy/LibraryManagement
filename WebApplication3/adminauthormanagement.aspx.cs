@@ -21,14 +21,39 @@ namespace WebApplication3
         // add button click
         protected void Button2_Click(object sender, EventArgs e)
         {
-            if(checkIfAuthorExists())
+
+            string message = "";
+            Boolean isValid = true;
+            string authorId = TextBox1.Text.Trim();
+            Boolean isauthorIdValid = authorId.Length > 0;
+            if (!isauthorIdValid)
             {
-                Response.Write("<script>alert('Author with this ID already Exist. You cannot add another Author with the same Author ID');</script>");
+                isValid = false;
+                message += "Please enter authorId. ";
+            }
+
+            string authorName = TextBox2.Text.Trim();
+            Boolean isauthorNameValid = authorName.Length > 0;
+            if (!isauthorNameValid)
+            {
+                isValid = false;
+                message += "Please enter authorName. ";
+            }
+
+            if (!isValid)
+            {
+                Response.Write("<script>alert('" + message + "');</script>");
+            }
+            else if (checkIfAuthorExists())
+            {
+                Response.Write("<script>alert('Author with this ID already Exist. " +
+                   "You cannot add another Author with the same Author ID');</script>");
             }
             else
             {
                 addNewAuthor();
             }
+
         }
         // update button click
         protected void Button3_Click(object sender, EventArgs e)

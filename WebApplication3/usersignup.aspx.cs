@@ -20,11 +20,94 @@ namespace WebApplication3
 
         }
 
-        // sign up button click event
+        // sign up button click event & Validation
         protected void Button1_Click(object sender, EventArgs e)
-        {
-          signUpNewMember();
+        {   
+            //Validations//
+            string message = "";
+            Boolean isValid = true;
 
+            string fullName = TextBox1.Text.Trim();
+            Boolean isFullNameValid = fullName.Length > 0;
+            if(!isFullNameValid)
+            {
+                isValid = false;
+                message += "Please enter full name. ";
+            }
+
+            string dob = TextBox2.Text.Trim();
+            Boolean isDOBValid = dob.Length > 0;
+            if (!isDOBValid)
+            {
+                isValid = false;
+                message += "Please enter DOB. ";
+            }
+
+
+            string contactNumber = TextBox3.Text.Trim();
+            Boolean isContactNumberValid = contactNumber.Length == 10;
+            if (!isContactNumberValid)
+            {
+                isValid = false;
+                message += "Please enter 10 digit mobile number. ";
+            }
+
+            string email = TextBox4.Text.Trim();
+            Boolean isEmailValid = email.Length > 0;
+            if (!isEmailValid)
+            {
+                isValid = false;
+                message += "Please enter email ID. ";
+            }
+
+            string state = DropDownList1.SelectedItem.Value;
+            Boolean isStateValid = state != "select";
+            if (!isStateValid)
+            {
+                isValid = false;
+                message += "Please select state. ";
+            }
+
+            string city = TextBox6.Text.Trim();
+            Boolean isCityValid = city.Length > 0;
+            if (!isCityValid)
+            {
+                isValid = false;
+                message += "Please enter city. ";
+            }
+
+            string pincode = TextBox7.Text.Trim();
+            Boolean isPincodeValid = pincode.Length > 0;
+            if (!isPincodeValid)
+            {
+                isValid = false;
+                message += "Please enter pincode. ";
+            }
+
+            string address = TextBox5.Text.Trim();
+            Boolean isAddressValid = address.Length > 0;
+            if (!isAddressValid)
+            {
+                isValid = false;
+                message += "Please enter address. ";
+            }
+
+            // password validations
+            string password = TextBox9.Text.Trim();
+            Boolean isPasswordValid = password.Length > 0;
+            if (!isPasswordValid)
+            {
+                isValid = false;
+                message += "Please enter password. ";
+            }
+            //Validations Complete//
+            if (!isValid)
+            {
+                Response.Write("<script>alert('" + message + "');</script>");
+            } else
+            {
+                signUpNewMember();
+            }
         }
 
 
