@@ -4,17 +4,54 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div>
+        <br /><br /><br /><br />
+    </div>
 
-    <section>
-        <img src="imgs/home-bg.jpg" class="img-fluid"/>
+   <%--Carousel Begins--%>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="imgs/carosel2.jpg" alt="First slide" width="50" height="700">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/carosel1.jpg" alt="Second slide"  width="50" height="700">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="imgs/carosel3.jpg" alt="Third slide" width="50" height="700">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <%--Carousel Ends--%>
+
+
+     <div>
+        <br />
+        <br />
+    </div>
+     <section align="center">
+        <img src="imgs/HomePageImage2.png" class="img-fluid" alt="Library Image" width="1300" height="600" />
     </section>
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <center>
-                    <h2>Our Features</h2>
-                    <p><b>Our 3 Primary Features -</b></p>
+                    <h2>What we Offer?</h2>
+                    <p><b>Manage all library related operations in one place</b></p>
                     </center>
                 </div>
             </div>
@@ -22,25 +59,22 @@
             <div class="row">
                 <div class="col-md-4">
                     <center>
-                     <img width="150px" src="imgs/digital-inventory.png"/>
-                     <h4>Digital Book Inventory</h4>
-                    <p class="text-justify">It is a method that libraries use to determine whether some items in their collection are in need of preservation</p>
+                     <h4>Book Catalog</h4>
+                    <p class="text-justify">Maintain all the books information in one place that is easy to access.</p>
                     </center>
                 </div>
 
                 <div class="col-md-4">
                     <center>
-                     <img width="150px" src="imgs/search-online.png"/>
-                     <h4>Search Books</h4>
-                    <p class="text-justify">User can search books here, by typing name of the book or author name</p>
+                     <h4>Find Books</h4>
+                    <p class="text-justify">Find the book and its status by using search bar</p>
                     </center>
                 </div>
 
                 <div class="col-md-4">
                     <center>
-                     <img width="150px" src="imgs/defaulters-list.png"/>
-                     <h4>Defaulter List</h4>
-                    <p class="text-justify">It is the list of users who has not returned books before due date </p>
+                     <h4>For admins, find the defaulters</h4>
+                    <p class="text-justify">The admins can find the defaulters who failed to return on time</p>
                     </center>
                 </div>
             </div>
@@ -48,50 +82,10 @@
 
     </section>
 
-
-     <section>
-         <img src="imgs/in-homepage-banner.jpg" class="img-fluid"/>
-        
+    <section align="center">
+        <img src="imgs/HomePageImage1.jpg" class="img-fluid" alt="Library Image" width="900" height="600" />
     </section>
 
-     <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <center>
-                    <h2>Our Process</h2>
-                    <p><b>We have a Simple 3 Step Process</b></p>
-                    </center>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <center>
-                        <img width="150px" src="imgs/sign-up.png" />
-                     
-                     <h4>Sign Up</h4>
-                    <p class="text-justify">In order to acess the facilites of library user needs to sign up i.e regeister by providing details</p>
-                    </center>
-                </div>
 
-                <div class="col-md-4">
-                    <center>
-                     <img width="150px" src="imgs/search-online.png"/>
-                     <h4>Search Books</h4>
-                    <p class="text-justify">User can search books here, by typing name of the book or author name</p>
-                    </center>
-                </div>
-
-                <div class="col-md-4">
-                    <center>
-                     <img width="150px" src="imgs/library.png"/>
-                     <h4>Visit Us</h4>
-                    <p class="text-justify">User can visit library anytime between 9 AM to 6 PM</p>
-                    </center>
-                </div>
-            </div>
-        </div>
-
-    </section>
 </asp:Content>

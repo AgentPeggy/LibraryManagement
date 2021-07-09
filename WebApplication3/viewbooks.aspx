@@ -8,13 +8,14 @@
         </script>
     </asp:Content>
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="container">
-            <div class="row">
 
+        <div class="container">
+            <br /><br /><br /><br />
+            <div class="row">
                 <div class="col-sm-12">
                     <center>
                         <h3>
-                        Book Inventory List</h3>
+                        Books Catalog</h3>
                     </center>
                     <div class="row">
                         <div class="col-sm-12 col-md-12">

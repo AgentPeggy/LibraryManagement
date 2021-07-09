@@ -168,13 +168,6 @@ C:\Users\hp\Desktop\PROJECT DUPLICATE\ElibraryManagement_changes - Copy\WebAppli
 C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\WebApplication3.dll.config
 C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\WebApplication3.dll
 C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\WebApplication3.pdb
-C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\obj\Debug\ElibraryManagement.csprojAssemblyReference.cache
-C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\obj\Debug\ElibraryManagement.csproj.CoreCompileInputs.cache
-C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\obj\Debug\ElibraryManagement.csproj.CopyComplete
-C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\obj\Debug\WebApplication3.dll
-C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\obj\Debug\WebApplication3.pdb
 C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\roslyn\csc.exe
 C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\roslyn\csc.exe.config
 C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\roslyn\csc.rsp
@@ -221,3 +214,10 @@ C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\roslyn\vbc
 C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\roslyn\vbc.rsp
 C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\roslyn\VBCSCompiler.exe
 C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\obj\Debug\ElibraryManagement.csprojAssemblyReference.cache
+C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\obj\Debug\ElibraryManagement.csproj.CoreCompileInputs.cache
+C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\obj\Debug\ElibraryManagement.csproj.CopyComplete
+C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\obj\Debug\WebApplication3.dll
+C:\Users\VS066589\Peggy\Library\LibraryManagement\WebApplication3\obj\Debug\WebApplication3.pdb

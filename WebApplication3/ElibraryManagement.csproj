@@ -74,6 +74,7 @@
     <Content Include="adminlogin.aspx" />
     <Content Include="adminmembermanagement.aspx" />
     <Content Include="adminpublishermanagement.aspx" />
+    <Content Include="BookCatalog.aspx" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.3.1.slim.min.js" />
@@ -1737,6 +1738,13 @@
     </Compile>
     <Compile Include="adminpublishermanagement.aspx.designer.cs">
       <DependentUpon>adminpublishermanagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookCatalog.aspx.cs">
+      <DependentUpon>BookCatalog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookCatalog.aspx.designer.cs">
+      <DependentUpon>BookCatalog.aspx</DependentUpon>
     </Compile>
     <Compile Include="defaulters.aspx.cs">
       <DependentUpon>defaulters.aspx</DependentUpon>

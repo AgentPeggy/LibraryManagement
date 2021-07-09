@@ -33,10 +33,9 @@
     <form id="form1" runat="server">
         
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
                 <a class="navbar-brand" href="#">
-                    <img src="imgs/books.png" width="30" height="30" />
-                    E-Library
+                    The Library Tool
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,6 +55,10 @@
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="defaulters.aspx">Defaulters</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="BookCatalog.aspx">Book Catalog</a>
                         </li>
 
                     </ul>
@@ -79,6 +82,7 @@
                             <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Visible="False">Hello user</asp:LinkButton>
 
                         </li>
+
                     </ul>
                 </div>
 
@@ -97,9 +101,9 @@
 
          <!-- Footer -->
         <footer>
-            <div id="footer1" class="container-fluid">
+            <div id="footer1" class="container-fluid" style="height:60px;position: fixed; bottom:30px">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="background:dodgerblue;">
                         <p>
                             <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Admin Login</asp:LinkButton>
                             &nbsp;
@@ -118,7 +122,7 @@
 
                 </div>
             </div>
-            <div id="footer2" class="container-fluid">
+            <div id="footer2" class="container-fluid" style="height:40px;background:dodgerblue;position: fixed; bottom:0">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                         <p style="color:whitesmoke"><a class="footerlinks" href="#" target="_blank">E-Library Management</a></p>
