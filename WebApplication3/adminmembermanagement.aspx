@@ -7,10 +7,12 @@
    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="container-fluid">
-      <div class="row">
-         <div class="col-md-5">
-            <div class="card">
+
+<div class="container">
+        <div class="row">
+        <!--TOP-->
+        <div style="width: 800px;margin:auto;">
+                        <div class="card">
                <div class="card-body">
                   <div class="row">
                      <div class="col">
@@ -22,7 +24,8 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="imgs/generaluser.png" />
+                            <asp:Image ID="Image1" runat="server" Height = "100" Width = "100" ImageUrl="imgs/generaluser.png"/>
+                           <!--img width="100px" src="imgs/generaluser.png" />-->
                         </center>
                      </div>
                   </div>
@@ -117,11 +120,12 @@
                   </div>
                </div>
             </div>
-            <a href="homepage.aspx"><< Back to Home</a><br>
-            <br>
-         </div>
-         <div class="col-md-7">
-            <div class="card">
+        </div>
+        <!--TOP-->
+        <br /><br />
+        <!--BOTTOM-->
+        <div style="width: 800px;margin:auto;">
+                    <div class="card">
                <div class="card-body">
                   <div class="row">
                      <div class="col">
@@ -153,7 +157,10 @@
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-   </div>
+            <a href="homepage.aspx"><< Back to Home</a><br>
+            <br>
+        </div>
+        <!--BOTTOM-->
+        </div>
+</div>
 </asp:Content>

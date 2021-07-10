@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 
 namespace WebApplication3
 {
@@ -140,7 +141,15 @@ namespace WebApplication3
                         TextBox10.Text = dr.GetValue(5).ToString();
                         TextBox11.Text = dr.GetValue(6).ToString();
                         TextBox6.Text = dr.GetValue(7).ToString();
-
+                        string imageURL = dr.GetValue(11).ToString();
+                        if(imageURL.Length>0)
+                        {
+                            Image1.ImageUrl = String.Format("{0}", imageURL);
+                        }
+                        else
+                        {
+                            Image1.ImageUrl = "imgs/generaluser.png";
+                        }
                     }
 
                 }
@@ -201,6 +210,5 @@ namespace WebApplication3
             TextBox11.Text = "";
             TextBox6.Text = "";
         }
-
     }
 }

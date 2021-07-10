@@ -57,20 +57,7 @@ namespace WebApplication3
 
                     else if (Session["role"].Equals("admin"))
                     {
-                        LinkButton1.Visible = false; // user login link button
-                        LinkButton2.Visible = false; // sign up link button
 
-                        LinkButton3.Visible = true; // logout link button
-                        LinkButton7.Visible = true; // hello user link button
-                        LinkButton7.Text = "Hello Admin";
-
-
-                        LinkButton6.Visible = false; // admin login link button
-                        LinkButton11.Visible = true; // author management link button
-                        LinkButton12.Visible = true; // publisher management link button
-                        LinkButton8.Visible = true; // book inventory link button
-                        LinkButton9.Visible = true; // book issuing link button
-                        LinkButton10.Visible = true; // member management link button
                     }
                 }
 
@@ -124,6 +111,25 @@ namespace WebApplication3
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
             Response.Redirect("usersignup.aspx");
+        }
+
+        protected void HomeBtnClicked(object sender, EventArgs e)
+        {
+            if (Session["role"] != null)
+            {
+                if (Session["role"].Equals("admin"))
+                {
+                    Response.Redirect("AdminHome.aspx");
+                }
+                else
+                {
+                    Response.Redirect("homepage.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("homepage.aspx");
+            }
         }
 
         //logout button

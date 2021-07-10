@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 
 namespace WebApplication3
 {
@@ -17,7 +18,25 @@ namespace WebApplication3
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack && FileUpload1.PostedFile != null)
+            {
+                if (FileUpload1.PostedFile.FileName.Length > 0)
+                {
+                    FileUpload1.SaveAs(Server.MapPath("~/ProfilePictures/") + FileUpload1.PostedFile.FileName);
+                    Image1.ImageUrl = "~/ProfilePictures/" + FileUpload1.PostedFile.FileName;
+                }
+            }
+        }
 
+        protected void UploadFile(object sender, EventArgs e)
+        {
+            //string folderPath = Server.MapPath("~/ProfilePictures/");
+            //if (!Directory.Exists(folderPath))
+            //{
+            //Directory.CreateDirectory(folderPath);
+            //}
+            //FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
+            //Image1.ImageUrl = Path.GetFileName(FileUpload1.FileName);
         }
 
         // sign up button click event & Validation
@@ -112,13 +131,16 @@ namespace WebApplication3
 
 
 
-
+        void setImage()
+        {
+            Response.Write("<script>alert('Testing');</script>");
+        }
 
 
 
         void signUpNewMember()
         {
-            //Response.Write("<script>alert('Testing');</script>");
+            Response.Write("<script>alert('Testing');</script>");
 
             try
             {
@@ -128,8 +150,11 @@ namespace WebApplication3
                     con.Open();
                 }
 
-    
-                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_table(full_name,dob,contact_no,email,state,city,pincode,full_address,password,account_status) output INSERTED.member_id values(@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@password,@account_status)", con);
+                string filepath = "~/ProfilePictures/generaluser.png";
+                string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
+                FileUpload1.SaveAs(Server.MapPath("ProfilePictures/" + filename));
+                filepath = "~/ProfilePictures/" + filename;
+                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_table(full_name,dob,contact_no,email,state,city,pincode,full_address,password,account_status,book_img_link) output INSERTED.member_id values(@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@password,@account_status,@book_img_link)", con);
 
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
@@ -139,9 +164,9 @@ namespace WebApplication3
                 cmd.Parameters.AddWithValue("@city", TextBox6.Text.Trim());
                 cmd.Parameters.AddWithValue("@pincode", TextBox7.Text.Trim());
                 cmd.Parameters.AddWithValue("@full_address", TextBox5.Text.Trim());
-
                 cmd.Parameters.AddWithValue("@password", TextBox9.Text.Trim());
                 cmd.Parameters.AddWithValue("@account_status", "pending");
+                cmd.Parameters.AddWithValue("@book_img_link", filepath);
                 int modified =(int)cmd.ExecuteScalar();
                 con.Close();
                 string message = "Sign Up Successful. Go to User Login to Login. Your Member ID is "+ modified;

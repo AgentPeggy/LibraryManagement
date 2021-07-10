@@ -13,7 +13,12 @@
                         <div class="row">
                                 <div class="col">
                                     <center>
-                                        <img width="100px" src="imgs/generaluser.png"/>
+                                        <asp:Image ID="Image1" runat="server" Height = "100" Width = "100" ImageUrl="imgs/generaluser.png"/>
+                                        <hr />
+                                    </center>
+                                    <center>
+                                        <asp:FileUpload ID="FileUpload1" runat="server" />
+                                        <!--<asp:Button ID="btnUpload" Text="Upload" runat="server" OnClick="UploadFile" />-->
                                     </center>
                                 </div>
                         </div>
@@ -21,6 +26,7 @@
                         <div class="row">
                                 <div class="col">
                                     <center>
+                                        <br />
                                         <h4>Member Sign Up</h4>
                                     </center>
                                 </div>

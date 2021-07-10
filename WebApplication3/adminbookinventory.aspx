@@ -20,25 +20,21 @@
    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="container-fluid">
-      <div class="row">
-         <div class="col-md-5">
-            <div class="card">
+
+<div class="container">
+    <div class="row">
+        <!--TOP-->
+        <div style="width: 800px;margin:auto;">
+                        <div class="card">
                <div class="card-body">
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h4>Book Details</h4>
+                           <h4>Add Books</h4>
                         </center>
                      </div>
                   </div>
-                  <div class="row">
-                     <div class="col">
-                        <center>
-                           <img id="imgview" Height="150px" Width="100px" src="book_inventory/books1.png" />
-                        </center>
-                     </div>
-                  </div>
+
                   <div class="row">
                      <div class="col">
                         <hr>
@@ -134,6 +130,7 @@
                         </div>
                      </div>
                   </div>
+
                   <div class="row">
                      <div class="col-md-4">
                         <label>Edition</label>
@@ -195,11 +192,12 @@
                   </div>
                </div>
             </div>
-            <a href="homepage.aspx"><< Back to Home</a><br>
-            <br>
-         </div>
-         <div class="col-md-7">
-            <div class="card">
+        </div>
+        <!--TOP-->
+        <br /><br />
+        <!--BOTTOM-->
+        <div style="width: 800px;margin:auto;">
+                        <div class="card">
                <div class="card-body">
                   <div class="row">
                      <div class="col">
@@ -287,7 +285,10 @@
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-   </div>
+            <a href="homepage.aspx"><< Back to Home</a><br>
+            <br>
+        </div>
+        <!--BOTTOM-->
+    </div>
+</div>
 </asp:Content>

@@ -42,7 +42,8 @@ namespace WebApplication3
                         Session["role"] = "admin";
                         //Session["status"] = dr.GetValue(10).ToString();
                     }
-                    Response.Redirect("homepage.aspx");
+                    //Response.Redirect("homepage.aspx");
+                    Response.Redirect("AdminHome.aspx");
                 }
                 else
                 {

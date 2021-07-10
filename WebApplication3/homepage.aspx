@@ -4,9 +4,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <br /><br /><br /><br />
-    </div>
+    
 
    <%--Carousel Begins--%>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
