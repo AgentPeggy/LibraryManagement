@@ -34,6 +34,7 @@
         
         <div>
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+                <asp:Image ID="HomePageProfile" style="border-radius:50%;" runat="server" Height = "50" Width = "50" ImageUrl="imgs/books1.png"/>
                 <a class="navbar-brand" href="adminlogin.aspx">
                     The Library Tool
                 </a>

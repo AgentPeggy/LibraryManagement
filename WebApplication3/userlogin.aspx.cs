@@ -42,6 +42,17 @@ namespace WebApplication3
                         Session["fullname"] = dr.GetValue(0).ToString();
                         Session["role"] = "user";
                         Session["status"] = dr.GetValue(10).ToString();
+                        Session["fullname"] = dr.GetValue(0).ToString();
+                        string imageURL = dr.GetValue(11).ToString();
+                        if (imageURL.Length > 0)
+                        {
+                            Session["imagePath"] = String.Format("{0}", imageURL);
+                        }
+                        else
+                        {
+                            Session["imagePath"] = "imgs/generaluser.png";
+                        }
+
                     }
                     Response.Redirect("homepage.aspx");
                 }

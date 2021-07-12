@@ -15,14 +15,17 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="imgs/generaluser.png"/>
+                            <h4>Your Profile</h4>
+                            <br />
+                           <asp:Image ID="UserProfileImage" style="border-radius:50%;" runat="server" Height = "80" Width = "80"/>
                         </center>
+                         <center><asp:FileUpload ID="FileUpload1" runat="server" BackColor="LightBlue" ForeColor="White" BorderStyle="Outset"/></center>
                      </div>
                   </div>
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h4>Your Profile</h4>
+                            <br />
                            <span>Account Status - </span>
                            <asp:Label class="badge badge-pill badge-info" ID="Label1" runat="server" Text="Your status"></asp:Label>
                         </center>

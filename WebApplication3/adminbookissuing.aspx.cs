@@ -31,8 +31,30 @@
                     }
                     else
                     {
-                        issueBook();
+                    //verify date
+                    String issueString = TextBox5.Text;
+                    String dueString = TextBox6.Text;
+
+                    if (issueString.Length == 0 || dueString.Length == 0) {
+                        Response.Write("<script>alert('Please select issue date and due date');</script>");
                     }
+                    else
+                    {
+                        DateTime issueDate = DateTime.Parse(issueString);
+                        DateTime dueDate = DateTime.Parse(dueString);
+
+                        if (issueDate > dueDate)
+                        {
+                            Response.Write("<script>alert('Please select valid issue date and due date');</script>");
+                        }
+                        else
+                        {
+                            issueBook();
+                        }
+                    }
+
+                    
+                }
 
                 }
                 else
@@ -266,7 +288,10 @@
                     if (dt.Rows.Count >= 1)
                     {
                         TextBox3.Text = dt.Rows[0]["full_name"].ToString();
-                    }
+                        DateTime today = DateTime.Now;
+                        TextBox5.Text = today.ToString("yyyy/MM/dd");
+                        TextBox6.Text = today.AddDays(7).ToString("yyyy/MM/dd");
+                }
                     else
                     {
                         Response.Write("<script>alert('Wrong User ID');</script>");

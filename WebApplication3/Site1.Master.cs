@@ -43,7 +43,7 @@ namespace WebApplication3
 
                         LinkButton3.Visible = true; // logout link button
                         LinkButton7.Visible = true; // hello user link button
-                        LinkButton7.Text = "Hello " + Session["username"].ToString();
+                        LinkButton7.Text = "Hello " + Session["fullname"].ToString();
 
 
                         LinkButton6.Visible = true; // admin login link button
@@ -52,7 +52,7 @@ namespace WebApplication3
                         LinkButton8.Visible = false; // book inventory link button
                         LinkButton9.Visible = false; // book issuing link button
                         LinkButton10.Visible = false; // member management link button
-
+                        HomePageProfile.ImageUrl = (string)Session["imagePath"];
                     }
 
                     else if (Session["role"].Equals("admin"))

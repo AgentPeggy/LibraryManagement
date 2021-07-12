@@ -117,8 +117,8 @@
 														<asp:BoundField DataField="member_name" HeaderText="Member Name" SortExpression="member_name"></asp:BoundField>
 														<asp:BoundField DataField="book_id" HeaderText="Book ID" SortExpression="book_id"></asp:BoundField>
 														<asp:BoundField DataField="book_name" HeaderText="Book Name" SortExpression="book_name"></asp:BoundField>
-														<asp:BoundField DataField="issue_date" HeaderText="Issue Date" SortExpression="issue_date"></asp:BoundField>
-														<asp:BoundField DataField="due_date" HeaderText="Due Date" SortExpression="due_date"></asp:BoundField>
+														<asp:BoundField DataField="issue_date" HeaderText="Issue Date" DataFormatString="{0:yyyy/MM/dd}" SortExpression="issue_date"></asp:BoundField>
+														<asp:BoundField DataField="due_date" DataFormatString="{0:yyyy/MM/dd}" HeaderText="Due Date" SortExpression="due_date"></asp:BoundField>
 													</Columns>
 												</asp:GridView>
 											</div>

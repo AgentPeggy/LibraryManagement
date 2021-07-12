@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace WebApplication3
 {
@@ -81,8 +82,13 @@ namespace WebApplication3
                     con.Open();
                 }
 
+                string filepath = "~/ProfilePictures/generaluser.png";
+                string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
+                FileUpload1.SaveAs(Server.MapPath("ProfilePictures/" + filename));
+                filepath = "~/ProfilePictures/" + filename;
 
-                SqlCommand cmd = new SqlCommand("update member_master_table set full_name=@full_name, dob=@dob, contact_no=@contact_no, email=@email, state=@state, city=@city, pincode=@pincode, full_address=@full_address, password=@password, account_status=@account_status WHERE member_id='" + Session["username"].ToString().Trim() + "'", con);
+
+                SqlCommand cmd = new SqlCommand("update member_master_table set full_name=@full_name, dob=@dob, contact_no=@contact_no, email=@email, state=@state, city=@city, pincode=@pincode, full_address=@full_address, password=@password, account_status=@account_status, book_img_link=@book_img_link WHERE member_id='" + Session["username"].ToString().Trim() + "'", con);
 
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
@@ -94,12 +100,12 @@ namespace WebApplication3
                 cmd.Parameters.AddWithValue("@full_address", TextBox5.Text.Trim());
                 cmd.Parameters.AddWithValue("@password", password);
                 cmd.Parameters.AddWithValue("@account_status", "pending");
-
+                cmd.Parameters.AddWithValue("@book_img_link", filepath);
                 int result = cmd.ExecuteNonQuery();
                 con.Close();
                 if (result > 0)
                 {
-
+                    Session["imagePath"] = filepath;
                     Response.Write("<script>alert('Your Details Updated Successfully');</script>");
                     getUserPersonalDetails();
                     getUserBookData();
@@ -142,6 +148,16 @@ namespace WebApplication3
                 TextBox5.Text = dt.Rows[0]["full_address"].ToString();
                 TextBox8.Text = dt.Rows[0]["member_id"].ToString();
                 TextBox9.Text = dt.Rows[0]["password"].ToString();
+
+                string imageURL = dt.Rows[0]["book_img_link"].ToString();
+                if (imageURL.Length > 0)
+                {
+                    UserProfileImage.ImageUrl = String.Format("{0}", imageURL);
+                }
+                else
+                {
+                    UserProfileImage.ImageUrl = "imgs/generaluser.png";
+                }
 
                 Label1.Text = dt.Rows[0]["account_status"].ToString().Trim();
 

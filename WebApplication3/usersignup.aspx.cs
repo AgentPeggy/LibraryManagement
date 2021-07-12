@@ -140,8 +140,6 @@ namespace WebApplication3
 
         void signUpNewMember()
         {
-            Response.Write("<script>alert('Testing');</script>");
-
             try
             {
                 SqlConnection con = new SqlConnection(strcon);

@@ -13,7 +13,7 @@
                         <div class="row">
                                 <div class="col">
                                     <center>
-                                        <asp:Image ID="Image1" runat="server" Height = "100" Width = "100" ImageUrl="imgs/generaluser.png"/>
+                                        <asp:Image ID="Image1" style="border-radius:50%;" runat="server" Height = "100" Width = "100" ImageUrl="imgs/generaluser.png"/>
                                         <hr />
                                     </center>
                                     <center>

@@ -24,7 +24,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                            <asp:Image ID="Image1" runat="server" Height = "100" Width = "100" ImageUrl="imgs/generaluser.png"/>
+                            <asp:Image ID="Image1" runat="server" style="border-radius:50%;" Height = "100" Width = "100" ImageUrl="imgs/generaluser.png"/>
                            <!--img width="100px" src="imgs/generaluser.png" />-->
                         </center>
                      </div>
