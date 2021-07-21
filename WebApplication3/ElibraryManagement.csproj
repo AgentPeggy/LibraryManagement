@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aboutUs.aspx" />
+    <Content Include="AddFreeEBook.aspx" />
     <Content Include="adminauthormanagement.aspx" />
     <Content Include="adminbookinventory.aspx" />
     <Content Include="adminbookissuing.aspx" />
@@ -1666,6 +1667,7 @@
     <Content Include="fontawesome\webfonts\fa-brands-400.svg" />
     <Content Include="fontawesome\webfonts\fa-regular-400.svg" />
     <Content Include="fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="FreeBooksUser.aspx" />
     <Content Include="homepage.aspx" />
     <Content Include="imgs\adminuser.png" />
     <Content Include="imgs\book-online.png" />
@@ -1697,6 +1699,13 @@
     </Compile>
     <Compile Include="aboutUs.aspx.designer.cs">
       <DependentUpon>aboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddFreeEBook.aspx.cs">
+      <DependentUpon>AddFreeEBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddFreeEBook.aspx.designer.cs">
+      <DependentUpon>AddFreeEBook.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminauthormanagement.aspx.cs">
       <DependentUpon>adminauthormanagement.aspx</DependentUpon>
@@ -1760,6 +1769,13 @@
     </Compile>
     <Compile Include="defaulters.aspx.designer.cs">
       <DependentUpon>defaulters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FreeBooksUser.aspx.cs">
+      <DependentUpon>FreeBooksUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FreeBooksUser.aspx.designer.cs">
+      <DependentUpon>FreeBooksUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>

@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace WebApplication3
 {
@@ -119,6 +120,13 @@ namespace WebApplication3
                 isValid = false;
                 message += "Please enter password. ";
             }
+            var regExp = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$");
+            Boolean isPasswordStrong = regExp.IsMatch(password);
+            if (isPasswordValid && !isPasswordStrong)
+            {
+                isValid = false;
+                message += "Password should contain at least 1 number, one uppercase letter, 8 characters long and one special char";
+            }
             //Validations Complete//
             if (!isValid)
             {
@@ -149,9 +157,13 @@ namespace WebApplication3
                 }
 
                 string filepath = "~/ProfilePictures/generaluser.png";
-                string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
-                FileUpload1.SaveAs(Server.MapPath("ProfilePictures/" + filename));
-                filepath = "~/ProfilePictures/" + filename;
+                if(FileUpload1.PostedFile.FileName != "")
+                {
+                    string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
+                    FileUpload1.SaveAs(Server.MapPath("ProfilePictures/" + filename));
+                    filepath = "~/ProfilePictures/" + filename;
+                }
+                
                 SqlCommand cmd = new SqlCommand("INSERT INTO member_master_table(full_name,dob,contact_no,email,state,city,pincode,full_address,password,account_status,book_img_link) output INSERTED.member_id values(@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@password,@account_status,@book_img_link)", con);
 
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());

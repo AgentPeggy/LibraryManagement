@@ -16,6 +16,7 @@
               <li class="list-group-item" ><a href="adminbookinventory.aspx">Book Inventory</a></li>
               <li class="list-group-item" ><a href="adminbookissuing.aspx">Issue Books</a></li>
               <li class="list-group-item" ><a href="adminmembermanagement.aspx">Manage Members</a></li>
+              <li class="list-group-item" ><a href="AddFreeEBook.aspx">Add E-Book</a></li>
             </ul>
         </div>
     </div>
