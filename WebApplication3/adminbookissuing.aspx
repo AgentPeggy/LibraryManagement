@@ -87,10 +87,11 @@
 							</div>
 						</div>
 					</div>
-					<a href="homepage.aspx"><< Back to Home
+					
 					</a>
 					<br>
 						<br>
+				<p style="margin-left: 12px;font-size:large; color: darkblue;">**Defaulters are highlighted in green  in the Issued Book List</p>
 						</div>
 						<div class="col-md-7">
 							<div class="card">
@@ -111,7 +112,8 @@
 											<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:elibraryDBConnectionString %>' SelectCommand="SELECT * FROM [book_issue_table]">
 											</asp:SqlDataSource>
 											<div class="col">
-												<asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnRowDataBound="GridView1_RowDataBound">
+												<asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" 
+													DataSourceID="SqlDataSource1" OnRowDataBound="GridView1_RowDataBound">
 													<Columns>
 														<asp:BoundField DataField="member_id" HeaderText="Member ID" SortExpression="member_id"></asp:BoundField>
 														<asp:BoundField DataField="member_name" HeaderText="Member Name" SortExpression="member_name"></asp:BoundField>

@@ -19,13 +19,11 @@ namespace WebApplication3
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack && FileUpload1.PostedFile != null)
+            
+            if (IsPostBack)
             {
-                if (FileUpload1.PostedFile.FileName.Length > 0)
-                {
-                    FileUpload1.SaveAs(Server.MapPath("~/ProfilePictures/") + FileUpload1.PostedFile.FileName);
-                    Image1.ImageUrl = "~/ProfilePictures/" + FileUpload1.PostedFile.FileName;
-                }
+                string Password = TextBox9.Text;
+                TextBox9.Attributes.Add("value", Password);
             }
         }
 
@@ -148,6 +146,14 @@ namespace WebApplication3
 
         void signUpNewMember()
         {
+            if (IsPostBack && FileUpload1.PostedFile != null)
+            {
+                if (FileUpload1.PostedFile.FileName.Length > 0)
+                {
+                    FileUpload1.SaveAs(Server.MapPath("~/ProfilePictures/") + FileUpload1.PostedFile.FileName);
+                    Image1.ImageUrl = "~/ProfilePictures/" + FileUpload1.PostedFile.FileName;
+                }
+            }
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -188,5 +194,20 @@ namespace WebApplication3
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
+
+
+        protected void CheckBox1_CheckedChanged(object sender, EventArgs e) {
+            if (CheckBox1.Checked)
+            {
+                TextBox9.TextMode = TextBoxMode.SingleLine;
+            }
+            else {
+                TextBox9.TextMode = TextBoxMode.Password;
+            }
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "scrollDown", "setTimeout(function () { window.scrollTo(0,document.body.scrollHeight); }, 25);", true);
+        }
+
+
+
     }
 }

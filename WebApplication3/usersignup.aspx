@@ -13,12 +13,11 @@
                         <div class="row">
                                 <div class="col">
                                     <center>
-                                        <asp:Image ID="Image1" style="border-radius:50%;" runat="server" Height = "100" Width = "100" ImageUrl="imgs/generaluser.png"/>
+                                        <asp:Image ID="Image1" style="border-radius:50%;" runat="server" Width = "150" ImageUrl="imgs/generaluser.png"/>
                                         <hr />
                                     </center>
                                     <center>
                                         <asp:FileUpload ID="FileUpload1" runat="server" />
-                                        <!--<asp:Button ID="btnUpload" Text="Upload" runat="server" OnClick="UploadFile" />-->
                                     </center>
                                 </div>
                         </div>
@@ -139,24 +138,22 @@
                                 </div>
 
                                 
-                        </div>
+                        </div>                       
 
-                        <div class="row">
-                            
-                                <div class="col">
-                                    <center>
-                                    <span class="badge badge-pill badge-info">Login Credentials</span></center>
-                                </div>
-                                
-                        </div>
-
-                       
-
-                                <div class="col-md-6">
+                                <div class="col-md-10">
                                     <label>Password</label>
                                     <div class="form-group">
-                                        <asp:TextBox class="form-control" ID="TextBox9" runat="server" placeholder="PASSWORD" TextMode="Password"></asp:TextBox>
-
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <asp:TextBox class="form-control" ID="TextBox9" runat="server" placeholder="PASSWORD" TextMode="Password"></asp:TextBox>
+                                            </div>
+                                            <div class="col-4" style="margin-top:8px;">
+                                                 <asp:CheckBox ID="CheckBox1" runat="server" oncheckedchanged="CheckBox1_CheckedChanged" 
+                                             AutoPostBack="true" Text="&#8287Show Password" />
+                                            </div>
+                                        
+                                        </div>
+                                        
                                     </div>
                                 </div>
                         </div>
@@ -176,7 +173,7 @@
                     </div>
                 </div>
 
-                <a href="homepage.aspx"><< Back to Home</a><br><br>
+               
             </div>
             
         </div>

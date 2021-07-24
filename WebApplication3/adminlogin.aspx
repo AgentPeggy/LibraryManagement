@@ -13,7 +13,7 @@
                         <div class="row">
                                 <div class="col">
                                     <center>
-                                        <img width="150px" src="imgs/adminuser.png"/>
+                                        <img width="250px" src="imgs/adminuser.jpg"/>
                                     </center>
                                 </div>
                         </div>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <a href="homepage.aspx"><< Back to Home</a><br><br>
+                
             </div>
             
         </div>

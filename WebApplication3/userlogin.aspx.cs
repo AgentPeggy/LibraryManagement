@@ -17,6 +17,11 @@ namespace WebApplication3
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                string Password = TextBox2.Text;
+                TextBox2.Attributes.Add("value", Password);
+            }
 
         }
 
@@ -54,6 +59,7 @@ namespace WebApplication3
                         }
 
                     }
+                    
                     Response.Redirect("homepage.aspx");
                 }
                 else
@@ -70,11 +76,24 @@ namespace WebApplication3
             // Response.Write("<script>alert('Button click');</script>");
         }
 
-
+        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBox1.Checked)
+            {
+                TextBox2.TextMode = TextBoxMode.SingleLine;
+            }
+            else
+            {
+                TextBox2.TextMode = TextBoxMode.Password;
+            }
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "scrollDown", "setTimeout(function () { window.scrollTo(0,document.body.scrollHeight); }, 25);", true);
+        }
 
 
         // user defined functions
-
+        protected void Button2_Click(object sender, EventArgs e) {
+            Response.Write("<script>alert('Please contact admin');</script>");
+        }
 
     }
 }

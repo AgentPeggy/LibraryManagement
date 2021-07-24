@@ -25,20 +25,36 @@
     <%--Datatables js--%>
     <script src="datatables/js/jquery.dataTables.min.js"></script>
 
+    <script type="text/javascript">  
+        $(document).ready(function () {  
+            $('[data-toggle="popover"]').popover();  
+        });  
+    </script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
+
     <asp:ContentPlaceHolder ID="head" runat="server">
 
     </asp:ContentPlaceHolder>
 </head>
 <body>
+
+
+
+
     <form id="form1" runat="server">
         
         <div>
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-                <asp:Image ID="HomePageProfile" style="border-radius:50%;" runat="server" Height = "50" Width = "50" ImageUrl="imgs/books1.png"/>
-                <a class="navbar-brand" href="adminlogin.aspx">
+                <asp:Image ID="HomePageProfile" style="border-radius:50%;" runat="server" Height = "50" Width = "50" ImageUrl="imgs/books1.jpg"/>
+                <a class="navbar-brand" href="adminlogin.aspx" style="color: black;margin-left: 12px;font-size:x-large;font-weight:bold;"
+                    title="For Admin" data-toggle="popover" data-trigger="hover" data-content="Click here to login as admin">
                     The Library Tool
                 </a>
-
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -46,49 +62,46 @@
                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" OnClick="HomeBtnClicked">Home</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" Font-Size="Larger" ID="LinkButton5" runat="server" OnClick="HomeBtnClicked"
+                                title="Home" data-toggle="popover" data-trigger="hover" data-content="Home Page">Home</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="aboutUs.aspx">About Us</a>
+                            <a class="nav-link" style="font-size: larger;" href="aboutUs.aspx"
+                                title="About Us" data-toggle="popover" data-trigger="hover" data-content="Contacts">About Us</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="terms.aspx">Terms</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="defaulters.aspx">Defaulters</a>
+                            <a class="nav-link" style="font-size: larger;" href="terms.aspx"
+                                title="Terms" data-toggle="popover" data-trigger="hover" data-content="Read Terms & Conditions">Terms</a>
                         </li>
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="BookCatalog.aspx">Book Catalog</a>
+                            <a class="nav-link" style="font-size: larger;" href="BookCatalog.aspx"
+                                title="Catalog" data-toggle="popover" data-trigger="hover" data-content="See the books available">Book Catalog</a>
                         </li>
+                        
                         <li class="nav-item active">
-                            <a class="nav-link" href="AdminHome.aspx">Admin Home</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="AdminHome.aspx">Admin Home</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="FreeBooksUser.aspx">Free Books</a>
+                            <a class="nav-link" style="font-size: larger;" href="FreeBooksUser.aspx"
+                                title="Free" data-toggle="popover" data-trigger="hover" data-content="Download PDF books for free!">Free Books</a>
                         </li>
                     </ul>
 
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">View Books</asp:LinkButton>
-                        </li>
                         
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">User Login</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" Font-Size="Larger" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"
+                                title="Login" data-toggle="popover" data-trigger="hover" data-content="Click to login">User Login</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" Font-Size="Larger" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"
+                                title="New Here?" data-toggle="popover" data-trigger="hover" data-content="Click to create account">Sign Up</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False">Logout</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" Font-Size="Larger" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False">Logout</asp:LinkButton>
                         </li>
 
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Visible="False">Hello user</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" Font-Size="Larger" ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Visible="False"
+                                title="My Profile" data-toggle="popover" data-trigger="hover" data-content="View & Edit your Profile">Hello user</asp:LinkButton>
 
                         </li>
 
@@ -141,7 +154,7 @@
             <div id="footer2" class="container-fluid" style="height:40px;background:dodgerblue;position: fixed; bottom:0">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <p style="color:whitesmoke"><a class="footerlinks" href="#" target="_blank">E-Library Management</a></p>
+                        <p style="color:whitesmoke"><a class="footerlinks" href="#" target="_blank">The Library Tool</a></p>
                     </div>
                 </div>
             </div>

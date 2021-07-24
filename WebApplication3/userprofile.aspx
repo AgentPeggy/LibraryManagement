@@ -170,7 +170,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="imgs/books1.png"/>
+                           <img width="100px" src="imgs/books2.png"/>
                         </center>
                      </div>
                   </div>
